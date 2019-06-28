@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "4ed57ca0-a71b-4a66-9995-d0b10bc84137",
+		"name": "StudentsMentalHealthRestAPITests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /students",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"name\": \"max\",\n  \"surname\": \"moriz\",\n  \"email\": \"max@moriz.com\",\n  \"password\": \"bla\",\n  \"illments\": [\n    \"sickAndTired\",\n    \"fear\"\n  ],\n  \"preferredTimeslots\": [\n    {\n      \"day\": \"monday\",\n      \"from\": \"14:00\",\n      \"to\": \"18:00\"\n    }\n  ],\n  \"subscriptionType\": \"basic\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /students/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /students/keyword=fear",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students?keyword=fear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "fear"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /students/subscriptionType=basic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students?subscriptionType=basic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "subscriptionType",
+							"value": "basic"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
