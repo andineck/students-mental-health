@@ -10,5 +10,5 @@ app
   // web routes
   .use(new Bundler('./server/web/index.html').middleware())
 
-
-app.listen(8080 || process.env.PORT)
+const port = process.env.PORT || 8080
+app.listen(port, () => console.log(`listening on port ${port}`))

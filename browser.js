@@ -1,9 +1,9 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
-const { IndexPage } = require('./browser/indexPage')
+const { Routes } = require('./browser/Routes')
 
 ReactDOM.render(
-  <IndexPage />,
+  <Routes />,
   document.getElementById('content')
 );
