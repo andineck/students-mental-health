@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "hookrouter": "^1.2.3",
     "install": "^0.12.2",
-    "npm": "^6.9.2",
+    "npm": "^6.14.6",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "superagent": "^5.1.0"
